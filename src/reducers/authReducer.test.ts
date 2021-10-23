@@ -13,5 +13,11 @@ describe("auth reducer", () => {
     expect(state).toMatchObject({
       isLoggedIn: false
     });
+
+    state = authReducer(state, toggleLogin());
+    expect(state).toMatchObject({
+      isLoggedIn: true
+    });
+
   });
 });
